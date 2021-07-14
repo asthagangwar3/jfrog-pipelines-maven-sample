@@ -1,4 +1,4 @@
-gitProvider: manishas_jfrog
-artifactory: demoArt
-repoPath: manishas-jfrog/jfrog-pipelines-maven-sample
-deployerRepo: maven-local
+gitProvider: GitHub
+artifactory: pipeline_artifactory
+repoPath: asthagangwar3/jfrog-pipelines-maven-sample
+deployerRepo: pipeline-maven-repo
