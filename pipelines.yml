@@ -28,9 +28,7 @@ pipelines:
 
       - name: app_buildinfo
         type: BuildInfo
-        configuration:
-        sourceArtifactory: {{ .Values.artifactory }}
-      
+       
       - name: publish_build
         type: PublishBuildInfo
         configuration:
