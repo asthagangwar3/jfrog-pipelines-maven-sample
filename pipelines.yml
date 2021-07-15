@@ -26,14 +26,6 @@ pipelines:
           integrations:
             - name: {{ .Values.artifactory }}
 
-      - name: app_buildinfo
-        type: BuildInfo
-        configuration:
-          inputSteps:
-            - name: mvn_build_step
-          outputResources:
-            - name: mvn_build_info
-       
       - name: publish_build
         type: PublishBuildInfo
         configuration:
@@ -47,4 +39,4 @@ pipelines:
         type: XrayScan
         configuration:
           inputResources:
-            - name: app_buildinfo
+            - name: mvn_build_info
