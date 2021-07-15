@@ -28,6 +28,11 @@ pipelines:
 
       - name: app_buildinfo
         type: BuildInfo
+        configuration:
+          inputSteps:
+            - name: mvn_build_step
+          outputResources:
+            - name: mvn_build_info
        
       - name: publish_build
         type: PublishBuildInfo
