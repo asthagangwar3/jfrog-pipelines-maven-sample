@@ -30,6 +30,7 @@ pipelines:
         type: BuildInfo
         configuration:
         sourceArtifactory: {{ .Values.artifactory }}
+      
       - name: publish_build
         type: PublishBuildInfo
         configuration:
@@ -38,7 +39,8 @@ pipelines:
             - name: mvn_build_step
           outputResources:
             - name: mvn_build_info
-       - name: xrayScanStep
+     
+     - name: xray_Scan_Step
         type: XrayScan
         configuration:
           inputResources:
